@@ -4,29 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ระบบบันทึกการอบรม DFT</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap">
 <style>
-  :root { --bg: #f5f7fa; --bar: #ffffff; --text: #1f2933; --muted: #616e7c; --accent: #1a56db; --line: #e4e7eb; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #111827; --bar: #1f2937; --text: #f3f4f6; --muted: #9ca3af; --accent: #60a5fa; --line: #374151; }
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; }
-  body { display: flex; flex-direction: column; background: var(--bg); color: var(--text); font-family: 'Sarabun', sans-serif; }
-  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-           padding: 8px 16px; background: var(--bar); border-bottom: 1px solid var(--line); font-size: 15px; }
-  header span { color: var(--muted); }
-  header a { color: var(--accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
-  header a:hover { text-decoration: underline; }
-  iframe { flex: 1; width: 100%; border: 0; background: #fff; }
+  html, body { margin: 0; height: 100%; background: #fff; }
+  @media (prefers-color-scheme: dark) { html, body { background: #111827; } }
+  iframe { display: block; width: 100%; height: 100%; border: 0; }
 </style>
 </head>
 <body>
-  <header>
-    <span>หน้าระบบไม่แสดง หรือขึ้นข้อความ "unable to open the file"?</span>
-    <a id="open" target="_blank" rel="noopener">เปิดระบบในแท็บใหม่ ↗</a>
-  </header>
   <iframe id="app" title="ระบบบันทึกการอบรม" allow="clipboard-write"></iframe>
 
 <script>
@@ -34,7 +18,6 @@
   const APP_URL = 'https://script.google.com/macros/s/AKfycbwKeIJq69AN6qEXo6K5zyxeONstTySJnqDnOxF1F6dVltyLYlXbm_Gk9PR4LugWfTEW/exec';
 
   document.getElementById('app').src = APP_URL;
-  document.getElementById('open').href = APP_URL;
 </script>
 </body>
 </html>
